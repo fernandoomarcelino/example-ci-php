@@ -1,0 +1,12 @@
+  name: ci-php-workflow
+  on: push
+
+  jobs:
+    build:
+      runs-on: ubuntu-latest
+      steps:
+        - uses: actions/checkout@v2
+        - uses: ./.github/actions/composer
+        - run: ./vendor/bin/phpunit
+        - run: sudo cp ./vendor/squizlabs/php_codesniffer/CodeSniffer.conf.dist ./vendor/squizlabs/php_codesniffer/CodeSniffer.conf
+        - run: ./vendor/bin/phpcs ./src/ --standard=PSR12
