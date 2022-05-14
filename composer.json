@@ -18,7 +18,11 @@
     },
     "scripts": {
         "tests": "./vendor/bin/phpunit --no-coverage",
-        "coverage": "./vendor/bin/phpunit"
+        "coverage": [
+            "./vendor/bin/phpunit",
+            "sed -i 's#/var/www/##' tests/coverage/phpunit.coverage.xml",
+            "sed -i 's#/var/www/##' tests/logs/junit.xml"
+        ]
     },
     "require": {
         "ramsey/uuid": "^4.3"
