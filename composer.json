@@ -18,7 +18,8 @@
     },
     "scripts": {
         "testu": "./vendor/bin/phpunit --no-coverage",
-        "tests": [
+        "tests": "./vendor/bin/phpunit",
+        "tests-dev": [
             "./vendor/bin/phpunit",
             "sed -i 's#/var/www/##' tests/coverage/phpunit.coverage.xml",
             "sed -i 's#/var/www/##' tests/logs/junit.xml"
