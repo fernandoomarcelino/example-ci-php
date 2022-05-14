@@ -1,0 +1,9 @@
+sonar.projectKey=example-ci-php
+
+sonar.sources=.
+sonar.exclusions=**/*_test.go
+
+sonar.tests=.
+sonar.test.inclusions=*/tests/*
+sonar.host.url=http://localhost:9000
+sonar.login=
