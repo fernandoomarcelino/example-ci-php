@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" backupGlobals="false" backupStaticAttributes="false"
-         bootstrap="vendor/autoload.php" colors="true" convertErrorsToExceptions="true"
-         convertNoticesToExceptions="true" convertWarningsToExceptions="true" processIsolation="false"
-         stopOnFailure="false" xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/9.3/phpunit.xsd" testdox="true">
+<phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         bootstrap="vendor/autoload.php" colors="true"
+         xsi:noNamespaceSchemaLocation="./vendor/phpunit/phpunit/phpunit.xsd" testdox="true">
     <testsuites>
         <testsuite name="Unit">
             <directory>tests/Unit</directory>
@@ -18,7 +17,8 @@
             <directory suffix=".php">./tests</directory>
         </exclude>
         <report>
-            <html outputDirectory="tests/coverage" lowUpperBound="50" highLowerBound="80"/>
+            <html outputDirectory="tests/coverage" highLowerBound="80"/>
+            <clover outputFile="tests/coverage/phpunit.coverage.xml"/>
         </report>
     </coverage>
 
