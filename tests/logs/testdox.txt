@@ -1,0 +1,29 @@
+Category Unit (Unit\Domain\Entity\CategoryUnit)
+ [x] Attributes
+ [x] Activated
+ [x] Disabled
+ [x] Update
+ [x] Exception name not valid
+ [x] Exception description not valid
+
+Domain Validation (Unit\Domain\Validation\DomainValidation)
+ [x] Not null when value is empty default message
+ [x] Not null when value is null default message
+ [x] Not null when value is empty custom message
+ [x] Not null when value is not empty
+ [x] Str max length when value is longer than max value default message
+ [x] Str max length when value is longer than max value custom message
+ [x] Str max length when value is less than max value
+ [x] Str max length when value is empty
+ [x] Str max length when value is null
+ [x] Str min length when value is less than min value default message
+ [x] Str min length when value is less than min value custom message
+ [x] Str min length when value is longer than min value
+ [x] Str min length when value is empty
+ [x] Str min length when value null
+ [x] Str can null and max lenth when value is null
+ [x] Str can null and max lenth when value is empty
+ [x] Str can null and max lenth when value not null and longer the max length default message
+ [x] Str can null and max lenth when value not null and longer the max length custom message
+ [x] Str can null and max lenth when value not null and less the max length
+

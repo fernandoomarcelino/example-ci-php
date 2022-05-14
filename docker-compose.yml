@@ -40,6 +40,18 @@ services:
     networks:
       - network-example-ci-php
 
+  sonar-scanner-example-ci-php:
+    image: mercuriete/sonar-scanner:latest
+    depends_on:
+      - sonarqube-example-ci-php
+    environment:
+      - SONAR_HOST_URL=http://sonar:9000
+      - SONAR_PROJECT_KEY=hello:world
+      - SONAR_PROJECT_NAME=example-ci-php
+      - SONAR_PROJECT_VERSION=0.1
+    networks:
+      - network-example-ci-php
+
 networks:
   network-example-ci-php:
     driver: bridge
