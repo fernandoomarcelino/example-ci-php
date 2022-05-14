@@ -5,3 +5,5 @@
 .phpunit.result.cache
 .scannerwork/
 sonar-project.properties
+tests/coverage
+tests/logs

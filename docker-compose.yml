@@ -6,10 +6,14 @@ services:
       context: ./
       dockerfile: Dockerfile
     container_name: app-example-ci-php
-    image: fullcycle/php
     working_dir: /var/www
     volumes:
       - ./:/var/www
+      - xdebug-data:/tmp/xdebug
+    environment:
+      XDEBUG_MODE: coverage
+      XDEBUG_CONFIG: remote_connect_back=1 remote_port=9003 remote_enable=1 profiler_enable=0 profiler_enable_trigger=1 profiler_output_dir=/tmp/xdebug mode=debug
+      APPLICATION_ENV: development
     networks:
       - network-example-ci-php
 
@@ -45,3 +49,5 @@ volumes:
   sonarqube_data:
   sonarqube_extensions:
   sonarqube_bundled-plugins:
+  xdebug-data:
+    name: xdebug-data
