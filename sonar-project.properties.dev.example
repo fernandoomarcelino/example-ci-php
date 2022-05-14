@@ -1,0 +1,13 @@
+sonar.projectKey=example-ci-php2
+
+sonar.sources=src
+
+sonar.host.url=http://localhost:9000
+sonar.login=
+
+sonar.language=php
+sonar.sourceEncoding=UTF-8
+
+sonar.tests=tests
+sonar.php.coverage.reportPaths=tests/coverage/phpunit.coverage.xml
+sonar.php.tests.reportPath=tests/logs/junit.xml

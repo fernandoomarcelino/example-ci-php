@@ -13,3 +13,9 @@
         - run: ./vendor/bin/phpunit
         - run: sudo cp ./vendor/squizlabs/php_codesniffer/CodeSniffer.conf.dist ./vendor/squizlabs/php_codesniffer/CodeSniffer.conf
         - run: ./vendor/bin/phpcs ./src/ --standard=PSR12
+        - run: .cp sonar-project.properties.prod sonar-project.properties
+        - name: SonarCloud Scan
+          uses: SonarSource/sonarcloud-github-action@master
+          env:
+            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+            SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
