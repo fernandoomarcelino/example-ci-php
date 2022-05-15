@@ -1,0 +1,10 @@
+sonar.projectKey=fernandoomarcelino_example-ci-php
+sonar.organization=fernandoomarcelino
+
+sonar.sources=src
+
+sonar.language=php
+sonar.sourceEncoding=UTF-8
+
+sonar.tests=tests
+sonar.php.coverage.reportPaths=coverage.xml
