@@ -53,7 +53,7 @@ class Category
     /**
      * @throws EntityValidationException
      */
-    private function validate()
+    private function validate(string $example)
     {
         DomainValidation::notNull($this->name);
         DomainValidation::strMinLenght($this->name);
